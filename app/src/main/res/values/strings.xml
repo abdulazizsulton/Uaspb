@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Uaspb</string>
+    <string name="galeri">galeri</string>
+    <string name="home">home</string>
+    <string name="unggah">unggah</string>
+    <string name="profile">profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile_picture" />
+</resources>
