@@ -1,5 +1,6 @@
 package com.example.uaspb;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,7 +11,6 @@ import android.widget.ImageButton;
 public class InfoActivity extends AppCompatActivity {
 
     private ImageButton ibNext;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

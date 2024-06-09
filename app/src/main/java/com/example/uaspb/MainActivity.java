@@ -1,10 +1,14 @@
 package com.example.uaspb;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -18,6 +22,17 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SharedPreferences preferences = getSharedPreferences("user_preferences", MODE_PRIVATE);
+        boolean isLoggedIn = preferences.getBoolean("is_logged_in", false);
+
+        if (!isLoggedIn) {
+            // Redirect to LoginActivity if not logged in
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+            return;
+        }
 
         bottomNavigationView = findViewById(R.id.bottomView);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);

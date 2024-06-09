@@ -1,5 +1,6 @@
 package com.example.uaspb;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,15 +9,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.uaspb.adapter.adapterGaleri;
+import com.example.uaspb.adapter.GalleryAdapter;
+import com.example.uaspb.databinding.FragmentGaleriBinding;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GaleriFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
     private String mParam1;
     private String mParam2;
+
+    private FragmentGaleriBinding binding;
 
     public GaleriFragment() {
         // Required empty public constructor
@@ -43,18 +49,32 @@ public class GaleriFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_galeri, container, false);
+        binding = FragmentGaleriBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
 
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        // Sample data for the adapter
+        List<String> data = new ArrayList<>();
+        data.add("Item 1");
+        data.add("Item 2");
+        data.add("Item 3");
 
+        // Set adapter
+        GalleryAdapter adapter = new GalleryAdapter(data);
+        binding.recyclerView.setAdapter(adapter);
 
-
-        adapterGaleri adapter = new adapterGaleri();
-        recyclerView.setAdapter(adapter);
+        binding.btnAnjing.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), DogiActivity.class);
+            startActivity(intent);
+        });
 
         return view;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 }

@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FBF3D5"
+    android:paddingTop="20dp"
     >
 
     <!-- TextView untuk menampilkan nama pengguna -->
@@ -35,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_below="@id/textViewTime"
-        android:src="@drawable/home02"
+        android:src="@drawable/galeri"
         android:scaleType="centerCrop" />
 
     <!-- Button untuk tombol suka -->

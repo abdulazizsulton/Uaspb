@@ -6,16 +6,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    android:id="@+id/main"> <!-- Added ID for the main layout -->
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="280dp"/>
+        android:layout_height="280dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
 
         <androidx.cardview.widget.CardView
             android:layout_width="300dp"
@@ -24,7 +25,7 @@
             app:cardCornerRadius="8dp">
 
             <EditText
-                android:id="@+id/etUsername"
+                android:id="@+id/etUsernameRegister"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
                 android:layout_width="300dp"
@@ -44,10 +45,9 @@
             android:layout_marginTop="18dp">
 
             <EditText
-                android:id="@+id/etNama"
+                android:id="@+id/etNamaRegister"
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
-                android:inputType="textPassword"
                 android:layout_gravity="center"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
             android:layout_marginTop="18dp">
 
             <EditText
-                android:id="@+id/etKataSandi"
+                android:id="@+id/etKataSandiRegister"
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:inputType="textPassword"
@@ -109,6 +109,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvSudahAdaAkun"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
@@ -117,5 +118,4 @@
         </LinearLayout>
 
     </LinearLayout>
-
 </LinearLayout>
