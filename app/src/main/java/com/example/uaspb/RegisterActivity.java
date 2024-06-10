@@ -73,7 +73,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onResponse(Call<Register> call, Response<Register> response) {
                 if (response.body() != null && response.isSuccessful() && response.body().isStatus()) {
                     Toast.makeText(RegisterActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(RegisterActivity.this, HomelogActivity.class); // Redirect to HomeActivity
+                    Intent intent = new Intent(RegisterActivity.this, MainActivity.class); // Redirect to HomeActivity
                     startActivity(intent);
                     finish();
                 } else {

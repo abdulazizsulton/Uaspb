@@ -71,8 +71,9 @@ public class LoginActivity extends AppCompatActivity {
                     LoginData loginData = response.body().getData();
                     sessionManager.createLoginSession(loginData);
 
-                    Toast.makeText(LoginActivity.this, response.body().getData().getFullName(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this, InfoActivity.class); // Changed to InfoActivity
+                    Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this, InfoActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     finish();
                 } else {

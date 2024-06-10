@@ -52,19 +52,8 @@ public class GaleriFragment extends Fragment {
         binding = FragmentGaleriBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
 
-        binding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        // Sample data for the adapter
-        List<String> data = new ArrayList<>();
-        data.add("Item 1");
-        data.add("Item 2");
-        data.add("Item 3");
-
-        // Set adapter
-        GalleryAdapter adapter = new GalleryAdapter(data);
-        binding.recyclerView.setAdapter(adapter);
-
-        binding.btnAnjing.setOnClickListener(v -> {
+        binding.imageAnjing.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), DogiActivity.class);
             startActivity(intent);
         });

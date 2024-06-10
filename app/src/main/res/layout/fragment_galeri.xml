@@ -1,37 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    android:background="#FAEBD7">
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnAnjing"
-        android:text="anjing"/>
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnKucing"
-        android:text="kucing"/>
+        <!-- Anjing Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="16dp">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnKelinci"
-        android:text="kelinci"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anjing"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="#D3D3D3"
+                android:gravity="center" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnHamster"
-        android:text="hamster"/>
+            <ImageView
+                android:id="@+id/image_anjing"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/home02"
+                android:layout_marginTop="8dp"
+                android:contentDescription="Anjing" />
+        </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/item_galeri"/>
-</LinearLayout>
+        <!-- Kucing Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kucing"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="#D3D3D3"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@+id/image_kucing"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/home02"
+                android:layout_marginTop="8dp"
+                android:contentDescription="Kucing" />
+        </LinearLayout>
+
+        <!-- Hamster Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hamster"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="#D3D3D3"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@+id/image_hamster"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/home02"
+                android:layout_marginTop="8dp"
+                android:contentDescription="Hamster" />
+        </LinearLayout>
+
+        <!-- Sugar Glider Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sugar Glider"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:background="#D3D3D3"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@+id/image_sugar_glider"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/home02"
+                android:layout_marginTop="8dp"
+                android:contentDescription="Sugar Glider" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

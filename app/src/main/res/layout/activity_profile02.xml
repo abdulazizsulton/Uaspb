@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAEBD7">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Profile Section -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/ivProvil02pp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/galeri"
+                        android:layout_marginRight="16dp"
+                        android:contentDescription="Profile Image" />
+
+                    <TextView
+                        android:id="@+id/tvProfil02Username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="himawari"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:padding="8dp"
+                        android:background="#D3D3D3"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/image_hapus"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/profil"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="90dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="Edit Image" />
+
+                    <ImageView
+                        android:id="@+id/image_edit"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/editing"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="Edit Image" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <!-- Dog Image Section -->
+            <ImageView
+                android:id="@+id/ivProfil02Gambar"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/home02"
+                android:contentDescription="Dog Image"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Dog Details Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="#D3D3D3"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvProfil02Nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="nama : milo"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tvProfil02Species"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Species : Anjing"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tvProfil02Jenis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jenis : bulgogi"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tvProfil02Umur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Umur : 2 Tahun"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/tvProfil02Bio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bio : Anjing ku lucu sekale"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

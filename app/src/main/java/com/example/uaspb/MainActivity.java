@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.uaspb.data.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -17,21 +18,19 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private UnggahFragment unggahFragment = new UnggahFragment();
     private GaleriFragment galeriFragment = new GaleriFragment();
     private HomeFragment homeFragment = new HomeFragment();
+    SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SharedPreferences preferences = getSharedPreferences("user_preferences", MODE_PRIVATE);
-        boolean isLoggedIn = preferences.getBoolean("is_logged_in", false);
-
-        if (!isLoggedIn) {
-            // Redirect to LoginActivity if not logged in
+        sessionManager = new SessionManager(MainActivity.this);
+        if (!sessionManager.isLoggedIn()) {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
             startActivity(intent);
             finish();
-            return;
         }
 
         bottomNavigationView = findViewById(R.id.bottomView);

@@ -22,14 +22,29 @@
         android:theme="@style/Theme.Uaspb"
         tools:targetApi="31">
         <activity
-            android:name=".DogiActivity"
+            android:name=".Profile03Activity"
             android:exported="false" />
         <activity
-            android:name=".HomelogActivity"
+            android:name=".Profile02Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Galeri04Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Galeri03Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Galeri02Activity"
+            android:exported="false" />
+        <activity
+            android:name=".DogiActivity"
             android:exported="false" />
         <activity
             android:name=".InfoActivity"
             android:exported="false" />
+        <activity
+            android:name=".SplasActivity"
+            android:exported="true" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
@@ -37,7 +52,7 @@
             android:name=".LoginActivity"
             android:exported="false" /> <!-- Non-launcher activity -->
         <activity
-            android:name=".SplasActivity"
+            android:name=".MainActivity"
             android:exported="true"> <!-- Launcher activity -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,9 +60,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
         <activity
             android:name=".UnggahFragment"
             android:exported="false" />

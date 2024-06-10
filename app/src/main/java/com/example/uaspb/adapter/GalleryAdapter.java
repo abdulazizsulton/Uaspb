@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.uaspb.databinding.ItemGaleriBinding;
+import com.example.uaspb.databinding.ItemGaleri02Binding;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
     @Override
     public GalleryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        ItemGaleriBinding binding = ItemGaleriBinding.inflate(inflater, parent, false);
+        ItemGaleri02Binding binding = ItemGaleri02Binding.inflate(inflater, parent, false);
         return new GalleryViewHolder(binding);
     }
 
@@ -39,9 +39,9 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
     }
 
     static class GalleryViewHolder extends RecyclerView.ViewHolder {
-        private final ItemGaleriBinding binding;
+        private final ItemGaleri02Binding binding;
 
-        public GalleryViewHolder(@NonNull ItemGaleriBinding binding) {
+        public GalleryViewHolder(@NonNull ItemGaleri02Binding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }
